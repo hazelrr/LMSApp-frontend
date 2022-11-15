@@ -1,0 +1,13 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+html{
+    min-height: 100%;
+}
+.container
+{
+    margin-top: 10%;
+}
+.card{
+    
+    display:inline-block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

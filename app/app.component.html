@@ -1,0 +1,45 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+  
+    <a class="navbar-brand" href="#">
+      <img src="assets\LMS icon.PNG" alt="" width="60" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"  routerLink="/Home"href="Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf ="!(isLoggedIn |async)" routerLink="/Register" href="/Register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf ="!(isLoggedIn |async)" routerLink="/Login" href="/Login">Login</a>
+        </li>
+       
+        <li class="nav-item"  *ngIf="isLoggedIn |async" style="margin-right: 5%;">
+                    
+          <!-- <i class='fa-solid fa-user' style='font-size:36px'></i> -->
+          <ul style="font-family:Georgia, 'Times New Roman', Times, serif"><b>{{userDisplayName}}</b></ul>
+        </li>
+       
+      </ul>
+      <button class="btn btn-success" (click)="onLogout()" *ngIf="isLoggedIn | async">Logout</button>
+      <form class="d-flex" *ngIf ="!(isLoggedIn |async)">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<main [@routerAnimations]="prepareRoute(outlet)" class="content">
+  <router-outlet #outlet="outlet"></router-outlet> 
+</main>
+

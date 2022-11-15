@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="dashboard.component.css">
+        
+    </head>
+    <body>
+       
+          <div class="search" style="font-weight: bold; margin-top: 5%;margin-left: 5%;"> 
+          
+            <h3 style="font-family: Georgia;">Search courses </h3>
+            <br/>
+            <p>Filter using technology and course duration</p>                
+            
+            <!-- action="/action_page.php"  -->
+              <form name="form1" id="form1" [formGroup]='form1' (ngSubmit)="onFormSubmit()">
+                Technology: <select name="techname" id="techname" formControlName="techname" class="form-control">
+                    <option value="" selected="selected">Select subject</option>
+                    <option value="Angular">Angular</option>
+                    <option value="React">React</option>
+                    <option value="Java">Java</option>
+                    <option value="Dotnet">Dotnet</option>
+                  </select>
+                  <br><br>
+                  Course duration(from): <select name="coursedurationfrom" id="coursedurationfrom" formControlName="coursedurationfrom" class="form-control" >
+                    <option value="" selected="selected">Select duration</option>
+                    <option value="1" >1</option>
+                    <option value="2" >2</option>
+                    <option value="3" >3</option>
+                    <option value="4" >4</option>
+                    <option value="5" >5</option>
+                    <option value="6" >6</option>
+                    <option value="7" >7</option>
+                    <option value="8" >8</option>
+                  </select>
+                  <br><br>
+                  Course duration(to): <select name="coursedurationto" id="coursedurationto" formControlName="coursedurationto" class="form-control" >
+                    <option value="" selected="selected">Select duration</option>
+                    <option value="1" >1</option>
+                    <option value="2" >2</option>
+                    <option value="3" >3</option>
+                    <option value="4" >4</option>
+                    <option value="5" >5</option>
+                    <option value="6" >6</option>
+                    <option value="7" >7</option>
+                    <option value="8" >8</option>
+                  </select>
+                  <br><br>
+             
+                  <input type="submit" style="background-color: rgb(25, 25, 85);color:white" value="Submit" >  
+                </form>
+         </div>         
+      
+          <div class="card-body" style="font-style: italic;" *ngIf="courseList" >
+          <div class="container" >
+            <!-- <div class="row">
+                <div class="col md 3 lg 6 sm 2"> -->
+            <div *ngFor="let c of courseList">
+                <!-- <div class="card text-dark mx-auto" style="background-color: honeydew; box-shadow: lavender; border: groove;" > -->
+                    <div class="row" style="float:left; margin-right: 2%;">
+                        <div class="col md 3 lg 6 sm 2">
+                <div class="card" style="width: 18rem; max-height: 50rem;">
+                    <img src="assets\Angular.PNG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{c.courseName}}</b></h5>
+                        <p class="card-text">{{c.courseDesc}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Duration :{{c.courseDuration}} Hour</b></li>
+                        <li class="list-group-item"><b>Technology : {{c.techId}}</b></li>
+                        
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link" style="color:rgb(20, 20, 83)">{{c.courseLink}}</a>
+                    
+                    </div>
+                    </div>
+            </div>
+            </div>
+            </div>
+        <!-- </div> -->
+        </div>
+    </div>
+      
+  <div class="container">
+    <div class="card-body"  *ngIf="courseList == null && usercourseList != null">
+          <div *ngFor="let c of usercourseList">
+            <!-- <div class="card text-dark mx-auto" style="background-color: honeydew; box-shadow: lavender; border: groove;" > -->
+                <div class="row" style="float:left; margin-right: 2%;">
+                    <div class="col md 3 lg 6 sm 2">
+            <div class="card" style="width: 18rem; max-height: 50rem;">
+                <img src="assets\Angular.PNG" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{c.courseName}}</b></h5>
+                    <p class="card-text">{{c.courseDesc}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>Duration :{{c.courseDuration}} Hour</b></li>
+                    <li class="list-group-item"><b>Technology : {{c.techId}}</b></li>
+                    
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link" style="color:rgb(20, 20, 83)">{{c.courseLink}}</a>
+                
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+  
+    </div>
+
+    </body>
+</html>

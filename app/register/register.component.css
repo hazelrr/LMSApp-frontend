@@ -1,0 +1,23 @@
+.container{
+    align-items: center;
+    margin: 10%;
+}
+.form-group
+{
+    font-family: Georgia;
+}
+.input
+{
+    white-space:pre-wrap;
+}
+.card-body
+{
+  border-style: hidden;
+  background-color:rgb(213, 221, 226);
+}
+
+.jumbotron{
+    background-image: url("https://us.123rf.com/450wm/craft24/craft241907/craft24190700013/127025301-blur-background-of-white-window-glass-using-for-mock-up-template-for-craft-display-of-your-design-.jpg?ver=6");
+    background-size: cover;
+
+}

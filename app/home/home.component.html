@@ -1,0 +1,162 @@
+
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="home.component.css">
+    <title>Learner Management system</title>
+    </head>
+    <body>
+    
+          <div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets\Angular corusal.PNG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets\dotnet corusal.PNG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets\java corusal.PNG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets\React corusal.PNG" class="d-block w-100" alt="...">
+                  </div>
+                
+                 
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+          <div class="container" >
+              <!-- <div class="row">
+                  <div class="col md 3 lg 6 sm 2">
+            <div class="card" style="width: 18rem;">
+                <img src="assets\Angular.PNG" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><b>Angular</b></h5>
+                  <p class="card-text">Angular provides a robust framework that facilitates the development of richly interactive applications. Gain experience building components, creating directives, modularizing applications, and building template-driven forms.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><b>Duration : 3 Hour</b></li>
+                  <li class="list-group-item"><b>Technology : Angular</b></li>
+                  
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link" style="color:rgb(20, 20, 83)">Course link</a>
+                
+                </div>
+              </div>
+            </div>
+
+
+              <div class="card" style="width: 18rem;">
+                
+                    <div class="col md 3 lg 6 sm 2">
+                <img src="assets\Java.PNG" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><b>Java</b></h5>
+                  <p class="card-text">This course includes hands-on practice and will give you a solid knowledge of the Java language. After completing this course, you will be able to identify Java's benefits, program in basic Java syntax using Java data types, and incorporate branches and loops.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><b>Duration : 3 Hour</b></li>
+                  <li class="list-group-item"><b>Technology : Java</b></li>
+                  
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link" style="color:rgb(20, 20, 83)">Course link</a>
+                
+                </div>
+              </div>
+            </div>
+
+              <div class="card" style="width: 18rem;">
+          
+                    <div class="col md 3 lg 6 sm 2">
+                <img src="assets\React.PNG" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><b>React</b></h5>
+                  <p class="card-text">The React. JS Course Curriculum contains basic elements like introduction, JSX overview, Environmental setup, real-time applications, forms and UI, Component Lifecycle, Event Handling, and Styles along with advanced features such as router and navigations, Flux, Redux, and Unit testing method.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><b>Duration : 3 Hour</b></li>
+                  <li class="list-group-item"><b>Technology : React</b></li>
+                  
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link" style="color:rgb(20, 20, 83)">Course link</a>
+                
+                </div>
+              </div>
+            </div>
+
+              <div class="card" style="width: 18rem;">
+              
+                    <div class="col md 3 lg 6 sm 2">
+                <img src="assets\dotnet.PNG" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><b>.Net</b></h5>
+                  <p class="card-text">NET (dot NET) course is a software developing course, where the developers use dot Net framework and machine level languages to develop different software. It is a free open source platform to develop different types of software applications.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><b>Duration : 3 Hour</b></li>
+                  <li class="list-group-item"><b>Technology : .Net</b></li>
+                  
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link" style="color:rgb(20, 20, 83)">Course link</a>
+                
+                </div>
+              </div>
+            </div>
+        </div> -->
+        
+            <div *ngFor="let c of courseList">
+              <!-- <div class="card text-dark mx-auto" style="background-color: honeydew; box-shadow: lavender; border: groove;" > -->
+                  <div class="row" style="float:left; margin-right: 2%;">
+                      <div class="col md 4 lg 6 sm 2">
+              <div class="card" style="width: 20rem; max-height: 100rem;">
+                  <img src="assets\Angular.PNG" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title"><b>{{c.courseName}}</b></h5>
+                      <p class="card-text">{{c.courseDesc}}</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><b>Duration :{{c.courseDuration}} Hour</b></li>
+                      <li class="list-group-item"><b>Technology : {{c.techId}}</b></li>
+                      
+                  </ul>
+                  <div class="card-body">
+                      <a href="#" class="card-link" style="color:rgb(20, 20, 83)">{{c.courseLink}}</a>
+                  
+                  </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          </div>
+  
+     
+        
+    
+    </body>
+
+    <div class="footer" style="text-align: center; background-color: rgb(196, 181, 181);position:absolute;bottom:0px;margin-bottom: 0px;padding-bottom: 0px;">
+      
+        <p style="font-family:Georgia">Learner management system @2022</p>
+
+
+    </div>
+    </html>
